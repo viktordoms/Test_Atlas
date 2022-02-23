@@ -1,0 +1,11 @@
+flask
+sqlalchemy
+flask_restful
+flask_sqlalchemy
+python-dotenv
+requests
+flask-marshmallow
+psycopg2-binary
+flask-migrate
+celery
+redis
