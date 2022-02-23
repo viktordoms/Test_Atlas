@@ -11,6 +11,7 @@ Run project:
 Next you want make new migrations :
 1. In wew terminal window enter: sudo docker-compose exec web bash
 2. Enter : flask db migrate
+2.1 If you get eroor about database - restart docker-container and go from point 1.
 3. Enter : flask db upgrade
 
 Start selery:
