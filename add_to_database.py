@@ -65,13 +65,13 @@ def save_to_db():
             data_response_el = exchanges_schema.dump(data_el)
 
             if not data_response_el:
-                print(el['txt'], '--Сьогодні ця валюта не записувалась. Зараз ми її запишемо ')
+                print(el['txt'], '--Сьогодні ця валюта не записувалась. Записую ')
                 save(el=el)
                 continue
 
             if el['rate'] == data_response_el[0]['rate']:
-                print(el['txt'], '--Ціна не змінилась')
+                print(el['txt'], '--Курс не змінився')
             else:
-                print(el['txt'], '--Ціна  змінилась')
+                print(el['txt'], '--Курс змінився')
                 save(el=el)
     return jsonify(exchange_lst)

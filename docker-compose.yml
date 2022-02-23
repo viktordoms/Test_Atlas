@@ -11,7 +11,7 @@ services:
     ports:
       - "8001:8002"
     env_file:
-      - env.example
+      - .env
     networks:
       - web
     depends_on:

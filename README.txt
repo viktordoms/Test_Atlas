@@ -1,13 +1,17 @@
 That start this project you need install some library. Open terminal and enter next:
 - sudo apt-get install docker
 - sudo apt-get install docker-compose
-- sudo apt -y install postgresql
 
 When you download application in your computer - need rename file 'env.example' to '.env':
     - in terminal /Test_Atlas enter 'mv env.example .env'
 
 Run project:
 1.1 in ./Test_Atlas enter : sudo docker-compose up --build
+
+Next you want make new migrations :
+1. In wew terminal window enter: sudo docker-compose exec web bash
+2. Enter : flask db migrate
+3. Enter : flask db upgrade
 
 Start selery:
 1. Open new terminal window, go in project directory and enter next: sudo docker-compose exec web bash
@@ -24,8 +28,3 @@ Endpoint for testing application:
 
 3.Get current rate: '/api/exchanges/current_rate?valcode=<Enter valcode>'
 
-
-If you want make new migrations - you need do next:
-1. In wew terminal window enter: sudo docker-compose exec web bash
-2. Enter : flask db migrate
-3. Enter : flask db upgrade

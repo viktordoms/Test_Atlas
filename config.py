@@ -6,3 +6,4 @@ class Config:
     API_URL = os.environ.get("API_URL")
     CELERY_BROKER_URL = os.environ.get("CELERY_BROKER_URL")
     CELERY_RESULT_BACKEND = os.environ.get("CELERY_RESULT_BACKEND")
+    SECRET_KEY = os.environ.get("SECRET_KEY")
